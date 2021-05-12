@@ -6,9 +6,9 @@
       "dependencies": "*",
       "devDependencies": "*"
     },
-    "tsconfig.json": "*",
     "tslint.json": "*",
-    "nx.json": "*"
+    "nx.json": "*",
+    "tsconfig.base.json": "*"
   },
   "tasksRunnerOptions": {
     "default": {
@@ -18,5 +18,16 @@
       }
     }
   },
-  "projects": {}
+  "projects": {
+    "sales-rep-dashboard": {
+      "tags": []
+    },
+    "sales-rep-dashboard-e2e": {
+      "tags": [],
+      "implicitDependencies": ["sales-rep-dashboard"]
+    }
+  },
+  "affected": {
+    "defaultBase": "master"
+  }
 }

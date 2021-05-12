@@ -1,0 +1,144 @@
+{
+  "migrations": [
+    {
+      "version": "9.3.0-beta.1",
+      "description": "Update prettier to v2",
+      "factory": "./src/migrations/update-9-3-0/update-9-3-0",
+      "package": "@nrwl/workspace",
+      "name": "update-9-3-0"
+    },
+    {
+      "version": "9.4.0-beta.1",
+      "description": "Remove config builder option when using eslint to enable automatic detection",
+      "factory": "./src/migrations/update-9-4-0/update-eslint-config",
+      "package": "@nrwl/workspace",
+      "name": "update-eslint-config"
+    },
+    {
+      "version": "9.4.0-beta.1",
+      "description": "Fix exclude patterns in tslint and eslint to ensure it does not break linting when a files option is defined",
+      "factory": "./src/migrations/update-9-4-0/update-linters-exclude",
+      "package": "@nrwl/workspace",
+      "name": "update-linters-exclude"
+    },
+    {
+      "version": "9.4.0-beta.1",
+      "description": "Decorate cli to enable computation caching",
+      "factory": "./src/migrations/update-9-4-0/add-decorate-cli",
+      "package": "@nrwl/workspace",
+      "name": "add-decorate-cli"
+    },
+    {
+      "version": "10.0.0-beta.0",
+      "description": "Add default branch to nx.json",
+      "factory": "./src/migrations/update-10-0-0/update-10-0-0",
+      "package": "@nrwl/workspace",
+      "name": "add-default-branch-to-nx-json"
+    },
+    {
+      "version": "10.0.0-beta.0",
+      "description": "Migrate tsconfigs to solution style tsconfigs",
+      "factory": "./src/migrations/update-10-0-0/solution-tsconfigs",
+      "package": "@nrwl/workspace",
+      "name": "solution-tsconfigs"
+    },
+    {
+      "version": "10.0.1-beta.0",
+      "description": "Migrate .eslintrc files to reference new tsconfig",
+      "factory": "./src/migrations/update-10-0-1/migrate-eslintrc",
+      "package": "@nrwl/workspace",
+      "name": "migrate-eslintrc-tsconfig"
+    },
+    {
+      "version": "10.1.0-beta.0",
+      "description": "Migrate .eslintrc files to use tsconfig with a wildcard",
+      "factory": "./src/migrations/update-10-1-0/migrate-eslintrc-tsconfig-wildcard",
+      "package": "@nrwl/workspace",
+      "name": "migrate-eslintrc-tsconfig-wildcard"
+    },
+    {
+      "version": "10.3.0-beta.0",
+      "description": "Add @nrwl/cli as dependency",
+      "factory": "./src/migrations/update-10-3-0/add-cli-dependency",
+      "package": "@nrwl/workspace",
+      "name": "add-cli-dependency"
+    },
+    {
+      "version": "10.3.0-beta.0",
+      "description": "Update typescript to v4",
+      "factory": "./src/migrations/update-10-3-0/update-typescript",
+      "package": "@nrwl/workspace",
+      "name": "update-10-3-0"
+    },
+    {
+      "version": "10.3.0-beta.1",
+      "description": "Adds .vscode/extensions.json to a workspace",
+      "factory": "./src/migrations/update-10-3-0/add-vscode-extensions",
+      "package": "@nrwl/workspace",
+      "name": "add-vscode-extensions"
+    },
+    {
+      "version": "10.3.0-beta.0",
+      "description": "Adds `buildableProjectDepsInPackageJsonType` for web and angular package builders",
+      "factory": "./src/migrations/update-10-3-0/add-buildable-project-deps-in-package-json-type",
+      "package": "@nrwl/workspace",
+      "name": "add-buildable-project-deps-in-package-json-type"
+    },
+    {
+      "version": "10.4.0-beta.5",
+      "description": "Add an explicit dependency on @nrwl/tao",
+      "factory": "./src/migrations/update-10-4-0/add-explicit-dep-on-tao",
+      "package": "@nrwl/workspace",
+      "name": "add-explicit-dep-on-tao"
+    },
+    {
+      "version": "10.4.5",
+      "description": "Update the 'update' npm script to invoke nx migrate",
+      "factory": "./src/migrations/update-10-4-0/update-script-to-invoke-nx-migrate",
+      "package": "@nrwl/workspace",
+      "name": "update-script-to-invoke-nx-migrate"
+    },
+    {
+      "version": "11.0.0-beta.3",
+      "description": "Update the decoration script when using Angular CLI",
+      "factory": "./src/migrations/update-11-0-0/update-decorate-angular-cli",
+      "package": "@nrwl/workspace",
+      "name": "update-decorate-angular-cli"
+    },
+    {
+      "version": "11.0.0-beta.3",
+      "description": "Update the @types/node package",
+      "factory": "./src/migrations/update-11-0-0/update-node-types",
+      "package": "@nrwl/workspace",
+      "name": "update-node-types"
+    },
+    {
+      "version": "11.0.0-beta.3",
+      "description": "Rename tools/schematics into tools/generators",
+      "factory": "./src/migrations/update-11-0-0/rename-workspace-schematics",
+      "package": "@nrwl/workspace",
+      "name": "rename-workspace-schematics"
+    },
+    {
+      "version": "11.0.0-beta.15",
+      "description": "Adds `outputs` based on builders",
+      "factory": "./src/migrations/update-11-0-0/add-outputs-in-workspace",
+      "package": "@nrwl/workspace",
+      "name": "add-outputs-in-workspace"
+    },
+    {
+      "version": "11.0.0",
+      "description": "Check that the right update command is used",
+      "factory": "./src/migrations/update-11-0-0/update-command-check",
+      "package": "@nrwl/workspace",
+      "name": "update-command-check"
+    },
+    {
+      "version": "11.0.2",
+      "description": "Rename the workspace-schematic script into workspace-generator script",
+      "factory": "./src/migrations/update-11-0-0/rename-workspace-schematic-script",
+      "package": "@nrwl/workspace",
+      "name": "rename-workspace-schematic-script"
+    }
+  ]
+}

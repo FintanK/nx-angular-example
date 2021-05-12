@@ -1,8 +1,123 @@
 {
   "version": 1,
-  "projects": {},
+  "projects": {
+    "sales-rep-dashboard": {
+      "projectType": "application",
+      "root": "apps/sales-rep-dashboard",
+      "sourceRoot": "apps/sales-rep-dashboard/src",
+      "prefix": "remote-insurance-corp",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/sales-rep-dashboard",
+            "index": "apps/sales-rep-dashboard/src/index.html",
+            "main": "apps/sales-rep-dashboard/src/main.ts",
+            "polyfills": "apps/sales-rep-dashboard/src/polyfills.ts",
+            "tsConfig": "apps/sales-rep-dashboard/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/sales-rep-dashboard/src/favicon.ico",
+              "apps/sales-rep-dashboard/src/assets"
+            ],
+            "styles": ["apps/sales-rep-dashboard/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/sales-rep-dashboard/src/environments/environment.ts",
+                  "with": "apps/sales-rep-dashboard/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "sales-rep-dashboard:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "sales-rep-dashboard:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "sales-rep-dashboard:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/sales-rep-dashboard/src/**/*.ts",
+              "apps/sales-rep-dashboard/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/sales-rep-dashboard"],
+          "options": {
+            "jestConfig": "apps/sales-rep-dashboard/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "sales-rep-dashboard-e2e": {
+      "root": "apps/sales-rep-dashboard-e2e",
+      "sourceRoot": "apps/sales-rep-dashboard-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/sales-rep-dashboard-e2e/cypress.json",
+            "tsConfig": "apps/sales-rep-dashboard-e2e/tsconfig.e2e.json",
+            "devServerTarget": "sales-rep-dashboard:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "sales-rep-dashboard:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/sales-rep-dashboard-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    }
+  },
   "cli": {
-    "defaultCollection": "@nrwl/workspace"
+    "defaultCollection": "@nrwl/angular"
   },
   "schematics": {
     "@nrwl/workspace": {
@@ -58,6 +173,21 @@
       "library": {
         "linter": "eslint"
       }
+    },
+    "@nrwl/angular:application": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest"
+    },
+    "@nrwl/angular:component": {
+      "style": "scss"
     }
-  }
+  },
+  "defaultProject": "sales-rep-dashboard"
 }
