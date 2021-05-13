@@ -15,7 +15,13 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@remote-insurance-corp/auth": ["libs/auth/src/index.ts"],
+      "@remote-insurance-corp/core": ["libs/core/src/index.ts"],
+      "@remote-insurance-corp/material": ["libs/material/src/index.ts"],
+      "@remote-insurance-corp/products": ["libs/products/src/index.ts"],
+      "@remote-insurance-corp/applications": ["libs/applications/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

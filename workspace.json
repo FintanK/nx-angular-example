@@ -114,6 +114,106 @@
           }
         }
       }
+    },
+    "core": {
+      "projectType": "library",
+      "root": "libs/core",
+      "sourceRoot": "libs/core/src",
+      "prefix": "remote-insurance-corp",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/core/src/**/*.ts",
+              "libs/core/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/core"],
+          "options": {
+            "jestConfig": "libs/core/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "material": {
+      "projectType": "library",
+      "root": "libs/material",
+      "sourceRoot": "libs/material/src",
+      "prefix": "remote-insurance-corp",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/material/src/**/*.ts",
+              "libs/material/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/material"],
+          "options": {
+            "jestConfig": "libs/material/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "products": {
+      "projectType": "library",
+      "root": "libs/products",
+      "sourceRoot": "libs/products/src",
+      "prefix": "remote-insurance-corp",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/products/src/**/*.ts",
+              "libs/products/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/products"],
+          "options": {
+            "jestConfig": "libs/products/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "applications": {
+      "projectType": "library",
+      "root": "libs/applications",
+      "sourceRoot": "libs/applications/src",
+      "prefix": "remote-insurance-corp",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/applications/src/**/*.ts",
+              "libs/applications/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/applications"],
+          "options": {
+            "jestConfig": "libs/applications/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

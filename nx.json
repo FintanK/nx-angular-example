@@ -25,6 +25,18 @@
     "sales-rep-dashboard-e2e": {
       "tags": [],
       "implicitDependencies": ["sales-rep-dashboard"]
+    },
+    "core": {
+      "tags": []
+    },
+    "material": {
+      "tags": []
+    },
+    "products": {
+      "tags": []
+    },
+    "applications": {
+      "tags": []
     }
   },
   "affected": {
